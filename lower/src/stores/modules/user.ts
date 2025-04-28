@@ -18,7 +18,7 @@ const setUser = (userdata: string) => {
 export const useUserStore= defineStore('user',{
     state:()=>({
         token: getToken() as string,
-        userdata:getUser() as object,
+        userdata:getUser() as any,
     }),
     getters:{
         getToken: (state) => state.token,
@@ -29,14 +29,21 @@ export const useUserStore= defineStore('user',{
             this.token = token;
             setToken(token);
         },
-        setUserData(userdata: object) {
+        setUserData(userdata: any) {
             this.userdata = userdata;
             setUser(userdata);
         },
 
 
-        login(){
-
+        login(userinfo:any){
+            let json = {
+                token: "SKJFLJFLJFLF1231YIKNKBKHKLJHLKJLKJLKGKJHHGJKHHGKJvjsljflls",
+                username:'系统管理员',
+                pid:100010,
+                phone:userinfo.phone,
+            }
+            this.setToken(json.token)
+            this.setUserData(JSON.stringify(json))
         },
         resetAll() {
             this.setToken("");

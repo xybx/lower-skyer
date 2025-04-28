@@ -1,79 +1,44 @@
 {
-  "id": "4464407",
-  "name": "技术中台",
+  "id": "4908756",
+  "name": "福清工业平台",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "19102546",
-      "name": "应用信息",
-      "font_class": "yingyongxinxi",
-      "unicode": "e713",
-      "unicode_decimal": 59155
+      "icon_id": "1470978",
+      "name": "安全态势",
+      "font_class": "anquantaishi",
+      "unicode": "e611",
+      "unicode_decimal": 58897
     },
     {
-      "icon_id": "19585505",
-      "name": "系统管理",
-      "font_class": "xitongguanli",
-      "unicode": "e99e",
-      "unicode_decimal": 59806
+      "icon_id": "12594579",
+      "name": "流程管理",
+      "font_class": "liuchengguanli",
+      "unicode": "e727",
+      "unicode_decimal": 59175
     },
     {
-      "icon_id": "20997713",
-      "name": "组织架构",
-      "font_class": "menu_zzjg",
-      "unicode": "e64e",
-      "unicode_decimal": 58958
+      "icon_id": "15392660",
+      "name": "监管3",
+      "font_class": "jianguan3",
+      "unicode": "e620",
+      "unicode_decimal": 58912
     },
     {
-      "icon_id": "309659",
-      "name": "plus3",
-      "font_class": "plus3",
-      "unicode": "e645",
-      "unicode_decimal": 58949
+      "icon_id": "26093502",
+      "name": "工业用地",
+      "font_class": "gongyeyongdi",
+      "unicode": "e7f2",
+      "unicode_decimal": 59378
     },
     {
-      "icon_id": "688101",
-      "name": "视频 播放 影片 2",
-      "font_class": "shipinbofangyingpian2",
-      "unicode": "e78e",
-      "unicode_decimal": 59278
-    },
-    {
-      "icon_id": "4847414",
-      "name": "删除",
-      "font_class": "shanchu",
-      "unicode": "e60f",
-      "unicode_decimal": 58895
-    },
-    {
-      "icon_id": "6512239",
-      "name": "选择日历",
-      "font_class": "xuanzerili-",
-      "unicode": "e62b",
-      "unicode_decimal": 58923
-    },
-    {
-      "icon_id": "2439690",
-      "name": "人员",
-      "font_class": "fl-renyuan",
-      "unicode": "e625",
-      "unicode_decimal": 58917
-    },
-    {
-      "icon_id": "6282785",
-      "name": "验证码",
-      "font_class": "yanzhengma1",
-      "unicode": "e6bf",
-      "unicode_decimal": 59071
-    },
-    {
-      "icon_id": "7762181",
-      "name": "密码",
-      "font_class": "ziyuanxhdpi",
-      "unicode": "e62e",
-      "unicode_decimal": 58926
+      "icon_id": "28301428",
+      "name": "行业产业链",
+      "font_class": "hangyechanyelian",
+      "unicode": "e733",
+      "unicode_decimal": 59187
     },
     {
       "icon_id": "566217",
@@ -130,6 +95,76 @@
       "font_class": "jietutupian",
       "unicode": "ea1c",
       "unicode_decimal": 59932
+    },
+    {
+      "icon_id": "2439690",
+      "name": "人员",
+      "font_class": "fl-renyuan",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "6282785",
+      "name": "验证码",
+      "font_class": "yanzhengma1",
+      "unicode": "e6bf",
+      "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "7762181",
+      "name": "密码",
+      "font_class": "ziyuanxhdpi",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "309659",
+      "name": "plus3",
+      "font_class": "plus3",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "688101",
+      "name": "视频 播放 影片 2",
+      "font_class": "shipinbofangyingpian2",
+      "unicode": "e78e",
+      "unicode_decimal": 59278
+    },
+    {
+      "icon_id": "4847414",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "6512239",
+      "name": "选择日历",
+      "font_class": "xuanzerili-",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "19102546",
+      "name": "应用信息",
+      "font_class": "yingyongxinxi",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "19585505",
+      "name": "系统管理",
+      "font_class": "xitongguanli",
+      "unicode": "e99e",
+      "unicode_decimal": 59806
+    },
+    {
+      "icon_id": "20997713",
+      "name": "组织架构",
+      "font_class": "menu_zzjg",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
     }
   ]
 }

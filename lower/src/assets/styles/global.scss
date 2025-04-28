@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'AL'; /* 自定义字体名 */
+  src: url('@/assets/fonts/阿里妈妈数黑体.ttf') format('truetype'); /* 引入ttf格式的字体文件 */
+  font-weight: normal; /* 字体粗细 */
+  font-style: normal; /* 字体样式 */
+}
+
+html,
+body,
+#app {
+    padding: 0;
+    margin: 0;
+    border:none;
+    height: 100%;
+    overflow: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,h2,h3,h4,h5{padding:0;margin:0}

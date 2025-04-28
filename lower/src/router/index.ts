@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { useUserStore } from '@/stores/modules/user'
 import { checkLoginApi } from '@/views/login/api/loginApi';
-import Layout from '@/layout/index/index.vue';
+import { ElMessage } from 'element-plus';
+import Layout from '@/layout/Index/index.vue';
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
     routes: [

@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
@@ -11,7 +12,9 @@ export default defineConfig({
     base:'',
     plugins: [
         vue(),
+        vueJsx(),
         AutoImport({
+            imports: ['vue','vue-router','pinia'],
             resolvers: [ElementPlusResolver()],
         }),
         Components({
@@ -43,7 +46,7 @@ export default defineConfig({
             output: {
                 chunkFileNames: "static/js/[name]-[hash].js",
                 entryFileNames: "static/js/[name]-[hash].js",
-                assetFileNames: (assetInfo)=>{
+                assetFileNames: (assetInfo:any)=>{
                    if(/\.(jpe?g|png|gif|svg)$/i.test(assetInfo.name)){
                        return 'static/images/[name]-[hash].[ext]'
                    } else if(/\.(ttf|woff|woff2|eot)$/i.test(assetInfo.name)){

@@ -2,6 +2,7 @@ import axios from 'axios';
 import router from '@/router';
 import { stringify } from 'qs';
 import { useUserStore } from "@/stores/modules/user";
+import { ElMessage } from 'element-plus';
 
 const request = axios.create({ baseURL: window.apiURL });
 
@@ -19,20 +20,18 @@ request.interceptors.request.use(
     }
 );
 
-const handleData = (response):Promise<any> =>{
+const handleData = (response:any):any =>{
     const { resetAll } = useUserStore();
     let code = response.data && response.data.code ? response.data.code : response.status
     switch (code){
         case 200:
             return response.data
         case 401:
-            resetAll().then(() =>{
-                router.push('/login');
-            })
+            resetAll()
+            router.push('/login');
         case 403:
-            resetAll().then(() =>{
-                router.push('/login');
-            })
+            resetAll()
+            router.push('/login');
     }
 }
 

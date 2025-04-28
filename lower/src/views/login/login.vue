@@ -67,8 +67,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, reactive } from 'vue';
 import {isPhone} from '@/utils/validate';
+import type { FormRules } from 'element-plus';
+import { useUserStore } from '@/stores/modules/user'
 
 interface FontProps{
       title?: string,
@@ -77,12 +78,18 @@ interface FontProps{
       className2?:string,
       children?: FontProps[] | []
   }
+  const route = useRoute()
+  const router = useRouter()
   const showcode = ref<boolean>(true)
   const loading = ref<boolean>(false)
   const headFont = ref<string>('')
   const fontData = ref<FontProps[] | []>([])
   const loginRef = ref<any>()
-  const loginForm = ref({})
+  const loginForm = ref({
+      phone:'13333333333',
+      code:'123456'
+  })
+  const login = (form:any)=> useUserStore().login(form)
   const timeCount = ref<number>(60);
   let intervalId:any = null;
 
@@ -154,9 +161,15 @@ interface FontProps{
 
   const handleLogin = ()=>{
       if (loginRef.value){
-          loginRef.value?.validate((valid)=>{
+          loginRef.value?.validate(async (valid:any)=>{
               console.log(45646);
-              ElMessage.error('开发中...')
+              // ElMessage.error('开发中...')
+              await login(loginForm.value)
+              ElMessage.success('登录成功')
+              setTimeout(()=>{
+                  router.push('/')
+              },500)
+
           })
       }
   }
