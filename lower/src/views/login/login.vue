@@ -85,10 +85,7 @@ interface FontProps{
   const headFont = ref<string>('')
   const fontData = ref<FontProps[] | []>([])
   const loginRef = ref<any>()
-  const loginForm = ref({
-      phone:'13333333333',
-      code:'123456'
-  })
+  const loginForm = ref({})
   const login = (form:any)=> useUserStore().login(form)
   const timeCount = ref<number>(60);
   let intervalId:any = null;
@@ -132,7 +129,7 @@ interface FontProps{
   };
 
   const getPhoneCode = async () => {
-    let params = { phone: Number(loginForm.value.phone) };
+    // let params = { phone: Number(loginForm.value.phone) };
     // let res = (await getCode(params).catch((err: any) => {
     //     ElMessage.error("发送失败");
     // })) as any;
@@ -159,19 +156,20 @@ interface FontProps{
       fontData.value = arr
   }
 
-  const handleLogin = ()=>{
-      if (loginRef.value){
-          loginRef.value?.validate(async (valid:any)=>{
-              console.log(45646);
-              // ElMessage.error('开发中...')
-              await login(loginForm.value)
-              ElMessage.success('登录成功')
-              setTimeout(()=>{
-                  router.push('/')
-              },500)
-
-          })
-      }
+  const handleLogin = async ()=>{
+      await login(loginForm.value)
+      ElMessage.success('登录成功')
+      setTimeout(()=>{
+          router.push('/')
+      },500)
+      // if (loginRef.value){
+      //     loginRef.value?.validate(async (valid:any)=>{
+      //         console.log(45646);
+      //         // ElMessage.error('开发中...')
+      //
+      //
+      //     })
+      // }
   }
 
 

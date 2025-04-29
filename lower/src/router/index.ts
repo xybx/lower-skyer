@@ -59,13 +59,10 @@ router.beforeEach( async (to, from, next) => {
         }
     }else {
         if(to.path !== '/login') {
-            ElMessage.warning('未获取到token信息');
-            window.history.back();
             next('/login')
         } else {
-            ElMessage.warning('未获取到token信息');
-            window.history.back();
             next()
         }
+        // ElMessage.warning('未获取到token信息');
     }
 });
