@@ -6,31 +6,31 @@
                     <h3 class="animate__animated animate__backInDown animate__delay-1s">{{headFont}}</h3>
                 </div>
                 <div class="loginbody">
-                    <div class="bodyleft animate__animated animate__fadeInLeft animate__delay-1s">
-                        <div class="leftbox">
-                            <div class="leftline animate__animated animate__fadeInUp animate__delay-1s">
-                                <u class="upfont animate__animated animate__zoomInUp animate__delay-2s">高</u>
-                                <span class="animate__animated animate__fadeInLeft animate__delay-2s">人工智能辅助</span>
-                                <u class="lowfont animate__animated animate__zoomInDown animate__delay-2s">低</u>
-                            </div>
-                            <div class="fontcont">
-                                <ul class="contlist">
-                                    <li v-for="(item,index) in fontData" :key="index">
-                                        <dl class="fontitem">
-                                            <dt class="itemtit animate__animated" :class="item.className1">{{item.title}}</dt>
-                                            <div class="itembox animate__animated" :class="item.className2">
-                                                <dd v-for="(val,k) in item.children" :key="k" :class="['animate__animated ', val.className]">{{val.title}}</dd>
-                                            </div>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bottomline animate__animated animate__backInLeft animate__delay-1s">
-                                <u class="onefont animate__animated animate__fadeInDown animate__delay-2s">第一层次</u>
-                                <u class="twofont animate__animated animate__fadeInDown animate__delay-3s">第二层次</u>
-                                <u class="thdfont animate__animated animate__fadeInDown animate__delay-4s">第三层次</u>
-                                <span class="animate__animated animate__flipInX animate__delay-2s">决策参考时序</span>
-                            </div>
+                    <div class="bodyleft">
+                        <div class="leftbox animate__animated animate__zoomInDown animate__delay-1s">
+<!--                            <div class="leftline animate__animated animate__fadeInUp animate__delay-1s">-->
+<!--                                <u class="upfont animate__animated animate__zoomInUp animate__delay-2s">高</u>-->
+<!--                                <span class="animate__animated animate__fadeInLeft animate__delay-2s">人工智能辅助</span>-->
+<!--                                <u class="lowfont animate__animated animate__zoomInDown animate__delay-2s">低</u>-->
+<!--                            </div>-->
+<!--                            <div class="fontcont">-->
+<!--                                <ul class="contlist">-->
+<!--                                    <li v-for="(item,index) in fontData" :key="index">-->
+<!--                                        <dl class="fontitem">-->
+<!--                                            <dt class="itemtit animate__animated" :class="item.className1">{{item.title}}</dt>-->
+<!--                                            <div class="itembox animate__animated" :class="item.className2">-->
+<!--                                                <dd v-for="(val,k) in item.children" :key="k" :class="['animate__animated ', val.className]">{{val.title}}</dd>-->
+<!--                                            </div>-->
+<!--                                        </dl>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div class="bottomline animate__animated animate__backInLeft animate__delay-1s">-->
+<!--                                <u class="onefont animate__animated animate__fadeInDown animate__delay-2s">第一层次</u>-->
+<!--                                <u class="twofont animate__animated animate__fadeInDown animate__delay-3s">第二层次</u>-->
+<!--                                <u class="thdfont animate__animated animate__fadeInDown animate__delay-4s">第三层次</u>-->
+<!--                                <span class="animate__animated animate__flipInX animate__delay-2s">决策参考时序</span>-->
+<!--                            </div>-->
                         </div>
                     </div>
                     <div class="bodyright animate__animated animate__fadeInRight animate__delay-1s">
@@ -85,7 +85,7 @@ interface FontProps{
   const headFont = ref<string>('')
   const fontData = ref<FontProps[] | []>([])
   const loginRef = ref<any>()
-  const loginForm = ref({})
+  const loginForm = ref<any>({})
   const login = (form:any)=> useUserStore().login(form)
   const timeCount = ref<number>(60);
   let intervalId:any = null;
